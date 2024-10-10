@@ -1,3 +1,5 @@
+# Es primo
+
 from criba import criba
 
 # Bucle de programación defensiva para asegurar que el usuario ingrese un número válido
