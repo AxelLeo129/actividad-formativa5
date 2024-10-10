@@ -72,10 +72,17 @@ def criba(number):
     return {'isPrime': isPrime, 'sierve': sierve}
 
 if __name__ == "__main__":
-    # Número solicitado al usuario para calcular los primos menores o iguales a si mismo
-    number = int(input("Ingrese un entero positivo n: "))
+    # Bucle de programación defensiva para asegurar que el usuario ingrese un número válido
+    while True:
+        try:
+            number = int(input("Ingrese un entero positivo n: "))
+            if number > 0:
+                result = criba(number=number)
 
-    result = criba(number=number)
-
-    #Imprime el resultado
-    print(f"Los primos menores o iguales a {number} son {result['sierve']}")
+                #Imprime el resultado
+                print(f"Los primos menores o iguales a {number} son {result['sierve']}")
+                break
+            else:
+                print("Por favor, ingrese un número positivo.")
+        except ValueError:
+            print("Entrada inválida. Debe ingresar un número entero positivo.")
