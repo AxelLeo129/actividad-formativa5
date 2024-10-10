@@ -1,3 +1,5 @@
+# Algoritmo de Bézout
+
 # Bucle de programación defensiva para asegurar que el usuario ingrese un número válido
 while True:
         try:
