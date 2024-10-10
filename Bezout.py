@@ -3,9 +3,7 @@
 def aEuclidesExt(a, b):
     """
     Implementa el Algoritmo de Euclides Extendido para encontrar el máximo común divisor (MCD) de 'a' y 'b',
-    y además, calcula los coeficientes de Bézout, que son los valores x e y tales que:
-    
-        a * x + b * y = MCD(a, b)
+    y además, calcula los coeficientes de Bézout, que son los valores x e y:
     
     Args:
         a (int): El primer número entero.
@@ -16,13 +14,13 @@ def aEuclidesExt(a, b):
             - MCD es el máximo común divisor de 'a' y 'b'.
             - x e y son los coeficientes de Bézout que satisfacen la ecuación a * x + b * y = MCD(a, b).
     """
-    
+
     Q0 = [1, 0]  
     Q1 = [0, 1]  
     
     while b != 0:
         q = a // b  
-        r = a % b  
+        r = a % b
         
         a, b = b, r
         
